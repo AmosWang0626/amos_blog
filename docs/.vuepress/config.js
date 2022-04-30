@@ -5,6 +5,7 @@ module.exports = {
   lang: 'zh-CN',
   title: "Amos's Blog",
   description: 'https://www.amos.wang/',
+  head: [['link', { rel: 'icon', href: '/images/favicon.ico' }]],
   theme: defaultTheme({
     // Logo 配置
     logo: '/images/logo.png',
