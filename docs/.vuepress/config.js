@@ -3,7 +3,7 @@ const { searchPlugin } = require('@vuepress/plugin-search')
 
 module.exports = {
   lang: 'zh-CN',
-  title: "Amos's Blog",
+  title: "AMOS",
   description: 'https://www.amos.wang/',
   head: [['link', { rel: 'icon', href: '/images/favicon.ico' }]],
   // custom config
@@ -11,11 +11,6 @@ module.exports = {
   public: './asset/public',
   port: 8088,
   open: true,
-  markdown: {
-    code: {
-      lineNumbers: false
-    }
-  },
   // theme config
   theme: defaultTheme({
     // Logo 配置
@@ -31,27 +26,17 @@ module.exports = {
         link: '/',
       },
       {
-        text: '编程技术',
-        children: [
-          {
-            text: '服务端开发',
-            link: '/backend/'
-          },
-          {
-            text: '前端开发',
-            link: '/front/',
-            // 支持正则表达式
-            activeMatch: '^/front/',
-          },
-          {
-            text: '服务器相关',
-            link: '/ops/',
-            activeMatch: '^/ops/',
-          },
-        ],
+        // java/spring/mybatis/
+        text: 'Java技术栈',
+        link: '/backend/'
       },
       {
-        text: '精选文章',
+        // linux/docker/nginx/
+        text: 'Ops相关',
+        link: '/ops/'
+      },
+      {
+        text: '杂货铺',
         link: '/boutique/',
       }
     ],
@@ -59,21 +44,11 @@ module.exports = {
     sidebar: {
       '/backend/': [
         {
-          text: 'Java高效并发',
+          text: 'Java基础特性',
           link: '/backend/1-Java高效并发.md'
         },
         {
           text: '设计模式',
-          link: '/backend/2-设计模式.md'
-        },
-      ],
-      '/front/': [
-        {
-          text: 'Vue',
-          link: '/backend/1-Java高效并发.md'
-        },
-        {
-          text: 'Hexo',
           link: '/backend/2-设计模式.md'
         },
       ],
@@ -85,8 +60,18 @@ module.exports = {
       ],
       '/boutique/': [
         {
-          text: 'Boutique',
-          link: '/boutique/'
+          text: '前端技术',
+          link: '/boutique/front/',
+          children: [
+            {
+              text: '编写可维护的JavaScript',
+              link: '/boutique/front/01.编写可维护的JavaScript.md'
+            },
+            {
+              text: 'Hexo挂掉自动重启',
+              link: '/boutique/front/02.Hexo挂掉自动重启.md'
+            }
+          ]
         }
       ],
     },
