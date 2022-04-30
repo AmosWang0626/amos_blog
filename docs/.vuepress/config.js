@@ -11,7 +11,7 @@ module.exports = {
     logoDark: '/images/logo-dark.png',
     // 其他配置
     editLink: false,
-    repo: 'https://github.com/AmosWang0626/notes',
+    repo: 'https://github.com/AmosWang0626/amos_blog',
     // 导航栏
     navbar: [
       {
@@ -52,11 +52,13 @@ module.exports = {
         link: '/java/',
         children: [
           {
-            text: 'github',
-            link: 'https://github.com/AmosWang0626',
-            children: [],
+            text: 'Java高效并发',
+            link: '/backend/1-Java高效并发.md'
           },
-          'design',
+          {
+            text: '设计模式',
+            link: '/backend/2-设计模式.md'
+          },
         ],
       },
     ],
