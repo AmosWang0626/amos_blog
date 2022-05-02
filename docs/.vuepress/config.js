@@ -44,12 +44,44 @@ module.exports = {
     sidebar: {
       '/backend/': [
         {
-          text: 'Java基础特性',
-          link: '/backend/1-Java高效并发.md'
+          text: 'Java基础',
+          children: [
+            {
+              text: 'String.matches() 性能测试',
+              link: '/backend/java/base/1-String.matches()性能测试.md'
+            },
+            {
+              text: '万能的HelloWorld',
+              link: '/backend/java/base/2-万能的HelloWorld.md'
+            },
+          ]
+        },
+        {
+          text: 'Java并发编程',
+          children: [
+            {
+              text: 'Java高效并发',
+              link: '/backend/java/concurrent/1-Java高效并发.md'
+            }
+          ]
         },
         {
           text: '设计模式',
-          link: '/backend/2-设计模式.md'
+          children: [
+            {
+              text: '设计模式概述',
+              link: '/backend/design_mode/1-设计模式概述.md'
+            }
+          ]
+        },
+        {
+          text: 'MySQL',
+          children: [
+            {
+              text: 'MySQL概览',
+              link: '/backend/mysql/1-MySQL概览.md'
+            }
+          ]
         },
       ],
       '/ops/': [
@@ -61,7 +93,6 @@ module.exports = {
       '/boutique/': [
         {
           text: '前端技术',
-          link: '/boutique/front/',
           children: [
             {
               text: '编写可维护的JavaScript',

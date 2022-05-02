@@ -38,7 +38,7 @@ tags:
 - 总线加锁。早期CPU多为此方案，一个线程处理，其他线程阻塞，问题就是效率低下；
 - 缓存一致性协议。处理器访问缓存时需遵循对应协议，最出名的就是 Intel 的 MESI 了。
 
-![计算机内存模型](https://gitee.com/AmosWang/resource/raw/master/image/jvm/computer-memory-model.png)
+![计算机内存模型](/images/article/backend/java/concurrent/computer-memory-model.png)
 
 - 此处的主内存，对应物理机的 RAM 运行内存，就是常说的8GB、16GB内存；
 
@@ -65,11 +65,11 @@ tags:
 - 线程修改工作内存的数据，因为是线程私有的，直接修改即可；
 - 线程修改主内存的数据，线程不能直接修改主内存数据，需要先将主内存数据 Load 到工作内存，修改完，将数据 Save 到主内存，此时就涉及脏读和并发写的问题了。如何保证呢？也就是下文的内容了——加锁。
 
-![Java内存模型](https://gitee.com/AmosWang/resource/raw/master/image/jvm/java-memory-model.png)
+![Java内存模型](/images/article/backend/java/concurrent/java-memory-model.png)
 
 对照下图，是不是很熟悉？线程隔离数据区、线程共享数据区。
 
-![Java 运行时数据区](https://gitee.com/AmosWang/resource/raw/master/image/jvm/jvm-runtime-data-area.png)
+![Java 运行时数据区](/images/article/backend/java/concurrent/jvm-runtime-data-area.png)
 
 ## 2.3 原子性、可见性与有序性
 
