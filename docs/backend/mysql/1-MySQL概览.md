@@ -1,12 +1,12 @@
 ---
-title: MySQL
+title: MySQL概览
 date: 2021-04-10
 categories: MySQL
 tags:
 - MySQL
 ---
 
-# MySQL
+# MySQL概览
 
 ## MySQL存储引擎
 
