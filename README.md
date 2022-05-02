@@ -11,6 +11,9 @@
 ## Quick Start
 
 ```
+# install
+yarn install
+
 # start
 yarn dev
 
@@ -20,5 +23,4 @@ yarn build
 
 ## 相关文档
 
-VuePress2官方文档: https://v2.vuepress.vuejs.org/zh/reference/default-theme/frontmatter.html
-
+VuePress2官方文档: https://v2.vuepress.vuejs.org/zh/
